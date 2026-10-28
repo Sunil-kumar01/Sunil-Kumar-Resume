@@ -1,0 +1,74 @@
+{
+  "name": "Sunil Kumar",
+  "title": "Senior Microsoft Support Engineer | Microsoft Marketplace & Azure AI | Data Science",
+  "phone": "8427165985",
+  "email": "14bbt1019@gmail.com",
+  "github": "https://github.com/Sunil-kumar01",
+  "summary": "Technical support and data science professional with 8+ years of experience spanning Microsoft cloud support, Marketplace partner assistance, data analytics, machine learning, and computer-vision data operations. Skilled in customer and partner case management, technical troubleshooting, incident coordination, API and network debugging, and translating complex issues into clear next steps. Builds practical AI/GenAI prototypes for invoice review and document search.",
+  "skills": [
+    ["Microsoft support", "Azure Cognitive Services, Azure OpenAI, Microsoft Marketplace partner support, customer/partner cases, incident and escalation management"],
+    ["Troubleshooting", "REST APIs, Postman, networking, VNet integration, service diagnostics, issue reproduction and resolution"],
+    ["Data science", "Python, SQL, pandas, NumPy, scikit-learn, EDA, statistical analysis, classification, clustering, time-series forecasting"],
+    ["Reporting", "Power BI, Tableau, Excel, data quality and dashboarding"],
+    ["AI & application tools", "Generative AI, RAG, LangChain, ChromaDB, Flask, Streamlit, Ollama, Qwen 2.5, Google Gemini"]
+  ],
+  "experience": [
+    {
+      "role": "Microsoft Marketplace Partner Support | Sonata Software",
+      "dates": "March 2026–Present",
+      "bullets": [
+        "Provide partner-facing support for Microsoft Marketplace listing and offer workflows, helping partners understand submission, validation, and publishing requirements.",
+        "Triage partner-reported technical and operational issues, gather diagnostic details, guide troubleshooting, and coordinate escalations with internal teams.",
+        "Communicate progress and next steps, manage cases through resolution, and document recurring issues and support guidance."
+      ]
+    },
+    {
+      "role": "Senior Microsoft Support Engineer — Azure Cognitive Services | Sonata Software",
+      "dates": "December 2023–2025",
+      "bullets": [
+        "Supported customers and partners across Azure Cognitive Services, including Speech, Language, Vision, Decision, and Azure OpenAI-related scenarios.",
+        "Debugged integrations and issues involving APIs, dependencies, networking, and configuration; managed incidents and case escalations.",
+        "Created troubleshooting guides and knowledge articles. Earned 8 monthly/quarterly awards, maintained a 4.97+/5 average customer rating, and advanced internally to Tier 2 support."
+      ]
+    },
+    {
+      "role": "Data Scientist | Neostats Analytics Pvt. Ltd.",
+      "dates": "April 2023–July 2023",
+      "bullets": [
+        "Analyzed Mashreq Bank personal-loan digital journey data using SQL and Power BI; identified funnel drop-offs, data-quality issues, and opportunities to improve insight visibility.",
+        "Built and evaluated logistic- and linear-regression models to estimate customer conversion likelihood and support segmentation."
+      ]
+    },
+    {
+      "role": "Accenture Solutions Pvt. Ltd.",
+      "dates": "July 2017–December 2022",
+      "subrole": "Data Labeling / Computer Vision Associate (July 2017–December 2019); Trust & Safety Associate / Data Science projects (December 2019–December 2022)",
+      "bullets": [
+        "Supported a self-driving vehicle computer-vision program through LiDAR and image annotation, data quality audits, human evaluation, and onboarding/training of new team members.",
+        "Contributed to trust-and-safety and analytics work through data collection, cleansing, exploratory analysis, feature selection, classification, clustering, and model evaluation.",
+        "Contributed to commodity-hedging analysis using time-series and machine-learning approaches, including ARIMA-family models, Prophet, XGBoost, and Random Forest; shared findings through Power BI."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Agentic AI POC — Vendor Invoice Compliance & Discrepancy Auditor",
+      "description": "Built a Python/Streamlit demo that extracts selectable text from invoice PDFs and uses local Qwen 2.5 through Ollama to organize invoice fields and flag missing or potentially inconsistent information for human review.",
+      "stack": "Python, Streamlit, pypdf, Ollama, Qwen 2.5",
+      "url": "https://github.com/Sunil-kumar01/automated-vendor-invoice-compliance-verification-system",
+      "link_label": "Public GitHub project"
+    },
+    {
+      "title": "AI-Powered Document Search POC",
+      "description": "Built a Flask-based document Q&A prototype with document upload, retrieval-augmented generation (RAG), and natural-language search across PDF, Word, and PowerPoint files.",
+      "stack": "Python, Flask, LangChain, ChromaDB, SQLite, Google Gemini",
+      "url": "https://github.com/Sunil-kumar01/Document_search_poc",
+      "link_label": "GitHub repository (private)"
+    }
+  ],
+  "education": [
+    "B.Sc. Biotechnology, Chandigarh University — 2017 (75%)",
+    "Data Science programs — Simplilearn; Full Stack Data Scientist program — AlmaBetter",
+    "Generative AI with Large Language Models — Coursera; MLOps basics using AWS/Vertex AI; Data Science Basics — Programming Hub"
+  ]
+}
