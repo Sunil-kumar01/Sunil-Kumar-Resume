@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'resume_content.json'
+      - 'resume_content_ai_engineer.json'
       - 'generate_resume.py'
       - '.github/workflows/build-resume.yml'
   workflow_dispatch:
@@ -25,16 +26,18 @@ jobs:
           python-version: '3.12'
       - name: Install document generators
         run: python -m pip install python-docx reportlab
-      - name: Generate PDF and Word files
-        run: python generate_resume.py
+      - name: Generate original and Senior Digital Engineer resumes
+        run: |
+          python generate_resume.py
+          python generate_resume.py --data resume_content_ai_engineer.json --prefix Sunil_Kumar_Senior_Digital_AI_Engineer
       - name: Publish files to repository
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Sunil_Kumar_Resume.pdf Sunil_Kumar_Resume.docx
+          git add Sunil_Kumar_Resume.pdf Sunil_Kumar_Resume.docx Sunil_Kumar_Senior_Digital_AI_Engineer.pdf Sunil_Kumar_Senior_Digital_AI_Engineer.docx
           if git diff --cached --quiet; then
             echo "Resume files are already current."
           else
-            git commit -m "Build downloadable resume files"
+            git commit -m "Build original and targeted resume files"
             git push origin main
           fi

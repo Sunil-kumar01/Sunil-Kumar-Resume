@@ -1,3 +1,4 @@
+import argparse
 import json
 from pathlib import Path
 
@@ -12,8 +13,13 @@ from reportlab.lib.units import inch
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle, KeepTogether
 from xml.sax.saxutils import escape
 
+parser = argparse.ArgumentParser()
+parser.add_argument("--data", default="resume_content.json")
+parser.add_argument("--prefix", default="Sunil_Kumar_Resume")
+args = parser.parse_args()
+
 ROOT = Path(__file__).parent
-DATA = json.loads((ROOT / "resume_content.json").read_text())
+DATA = json.loads((ROOT / args.data).read_text())
 NAVY = RGBColor(18, 53, 91)
 BLUE = RGBColor(40, 101, 163)
 
@@ -68,7 +74,7 @@ for project in DATA["projects"]:
     p.paragraph_format.space_after = Pt(3)
 heading("Education & Professional Development")
 for item in DATA["education"]: bullet(item)
-word.save(ROOT / "Sunil_Kumar_Resume.docx")
+word.save(ROOT / f"{args.prefix}.docx")
 
 # PDF version
 styles = getSampleStyleSheet()
@@ -108,4 +114,4 @@ for project in DATA["projects"]:
     flow.extend([box, Spacer(1,3)])
 pdf_heading("Education & Professional Development")
 for item in DATA["education"]: pdf_bullet(item)
-SimpleDocTemplate(str(ROOT / "Sunil_Kumar_Resume.pdf"), pagesize=A4, rightMargin=.62*inch, leftMargin=.62*inch, topMargin=.48*inch, bottomMargin=.48*inch, title="Sunil Kumar Resume", author="Sunil Kumar").build(flow)
+SimpleDocTemplate(str(ROOT / f"{args.prefix}.pdf"), pagesize=A4, rightMargin=.62*inch, leftMargin=.62*inch, topMargin=.48*inch, bottomMargin=.48*inch, title=f"{DATA['name']} Resume", author=DATA["name"]).build(flow)
